@@ -25,7 +25,7 @@
       <textarea name="text">Hello! I love JavaScript 👍</textarea>
       <button id="stop">Stop!</button>
       <button id="speak">Speak</button>
-      <button id="english">All Voices</button>
+      <button id="english">Filter ON</button>
 
     </div>
 
@@ -75,15 +75,15 @@
 
   function styleButton() {
     if (eng) {
-      voiceButton.innerHTML = 'All Voices';
+      voiceButton.innerHTML = 'Filter ON';
     } else {
-      voiceButton.innerHTML = 'English Voices';
+      voiceButton.innerHTML = 'Filter OFF';
     }
   }
 
   function toggleEnglish() {
       eng = !eng;
-      console.log(eng);
+      // console.log(eng);
       populateVoices();
       msg.voice = voices.find(voice => voice.name === this.value);
       styleButton();
